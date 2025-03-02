@@ -16,8 +16,12 @@ public class Movie {
     @NotBlank(message = "Please provide movie ticket ")
     private  Integer movieId;
 
+    @Column(nullable=false)
+    @NotBlank(message = "Please provide movie name")
     private String title;
-    
+
+    @Column(nullable=false)
+    @NotBlank(message = "Please provide director name")
     private String director;
     
     private String  studio;
