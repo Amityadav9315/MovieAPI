@@ -36,5 +36,7 @@ public class MovieDto {
     @NotBlank(message = "Please provide movie poster")
     private String poster;
 
+    @NotBlank(message = "Please provide poster url")
+    private String posterUrl;
 
 }
