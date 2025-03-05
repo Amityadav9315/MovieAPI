@@ -30,14 +30,13 @@ public class Movie {
 
     @ElementCollection
     @CollectionTable(name="movie-caste")
-    private Set<String> movieCaste;
-
+    private Set<String> movieCast;
     @Column(nullable=false)
     @NotBlank(message = "Please provide movie release year")
     private Integer releaseYear;
 
     @Column(nullable=false)
-    @NotBlank(message = "Please provide movie poster")
+    @NotBlank(message = "Please provide movie po")
     private String poster;
 
 
