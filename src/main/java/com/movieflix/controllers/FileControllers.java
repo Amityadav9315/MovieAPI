@@ -25,8 +25,8 @@ public class FileControllers {
      private String path;
      @PostMapping("/upload")
     public ResponseEntity<String>uploadFileHandler(@RequestPart MultipartFile file) throws IOException {
-        fileService.uploadFile(fileService)
-         return ;
+         String  uploadedFileName=fileService.uploadFile(path,file);
+         return ResponseEntity.ok("File uploaded succesfully"+ uploadedFileName);
 
 
      }
