@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class FileControllers {
 
     private final FileService fileService;
-     public
+     public Filecontroller(FileService fileService){
+
+     }
 
 
 }
