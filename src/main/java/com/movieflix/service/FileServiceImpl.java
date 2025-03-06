@@ -7,6 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
 
 
 @Service
@@ -18,6 +19,15 @@ public class FileServiceImpl implements  FileService{
         String fileName=file.getOriginalFilename();
         // to get the file path
         String filePath=path+ File.separator+fileName;
+        //create a file object
+        File f=new File(path);
+        if(!f.exists()){
+            f.mkdir();
+        }
+        //copy the file or upload the file to the path
+        Files.copy(file.getInputStream().Paths.get(filePath).StandardCopyOption.REPLACE_EXISTING);
+
+
 
         return "";
     }

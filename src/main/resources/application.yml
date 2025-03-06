@@ -13,4 +13,4 @@ spring:
         format_sql: true
 
         project:
-          poster: poster/
+          poster: posters/
