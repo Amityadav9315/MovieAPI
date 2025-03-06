@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 
 @Service
@@ -25,15 +27,17 @@ public class FileServiceImpl implements  FileService{
             f.mkdir();
         }
         //copy the file or upload the file to the path
-        Files.copy(file.getInputStream().Paths.get(filePath).StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(file.getInputStream(), Paths.get(filePath), StandardCopyOption.REPLACE_EXISTING);
 
 
 
-        return "";
+        return fileName;
     }
 
     @Override
     public InputStream getResourceFile(String path, String name) throws IOException {
+
+
         return null;
     }
 }
