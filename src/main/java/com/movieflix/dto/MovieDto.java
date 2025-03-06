@@ -18,7 +18,7 @@ public class MovieDto {
 
     private  Integer movieId;
 
-
+   //to avoid blank space use thes notation
     @NotBlank(message = "Please provide movie title")
     private String title;
 
