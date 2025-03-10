@@ -18,13 +18,19 @@ import java.io.InputStream;
 public class FileControllers {
 
     private final FileService fileService;
-     public FileController(FileService fileService){
+     public FileControllers(FileService fileService){
          this.fileService=fileService;
+         System.out.println();
 
      }
      @Value("${projects.poster}")
      private String path;
-     @PostMapping("/upload")
+
+    public FileControllers(FileService fileService) {
+        this.fileService = fileService;
+    }
+
+    @PostMapping("/upload")
     public ResponseEntity<String>uploadFileHandler(@RequestPart MultipartFile file) throws IOException {
          String  uploadedFileName=fileService.uploadFile(path,file);
          return ResponseEntity.ok("File uploaded succesfully"+ uploadedFileName);
