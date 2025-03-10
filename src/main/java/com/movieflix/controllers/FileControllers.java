@@ -20,15 +20,13 @@ public class FileControllers {
     private final FileService fileService;
      public FileControllers(FileService fileService){
          this.fileService=fileService;
-         System.out.println();
+
 
      }
      @Value("${projects.poster}")
      private String path;
 
-    public FileControllers(FileService fileService) {
-        this.fileService = fileService;
-    }
+
 
     @PostMapping("/upload")
     public ResponseEntity<String>uploadFileHandler(@RequestPart MultipartFile file) throws IOException {
